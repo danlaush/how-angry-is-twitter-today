@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How Angry is Twitter Today?</title>
+	<style type="text/css">
+		html {
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		.container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			animation-duration: 3s;
+			animation-name: angercolor;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+
+		.paused{
+			animation: none;
+		}
+
+		.hero h1 {
+			font-size: 4vw;
+			color: white;
+		}
+
+		.search {
+
+		}
+
+		.search__form {
+			display: inline;
+		}
+
+		.search__form input {
+			appearance: none;
+			border: 0;
+			background-color: transparent;
+			color: white;
+			font-size: 4vw;
+			font-weight: bold;
+			width: 4em;
+			border-bottom: 0.1em solid white;
+		}
+
+		/*
+			$red: #E4001B;
+			$blue: #6194BC;
+
+			$blue: #a5cbd8;
+			$red: #aa0c10;
+		*/
+
+		@keyframes angercolor {
+			0% {
+				background-color: #a5cbd8;
+			}
+
+			100% {
+				background-color: #aa0c10;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="hero">
+		<h1>How Angry Is 
+			<span class="search">
+				<form id="search" class="search__form" name="search">
+					<input type="text" value="Twitter" name="searchTerm" />
+				</form>
+			</span> Today?
+		</h1>
+	</div>
+</div>
+<script type="text/javascript">
+	// const blue = '#a5cbd8'; const red = '#aa0c10';
+	// const searchForm = document.getElementById('search');
+	// const container = document.getElementById('container');
+
+	// searchForm.addEventListener('submit', function(e) {
+	// 	e.preventDefault();
+	// 	console.log('submit form');
+		// var formData = new FormData(e.target);
+		// console.log(formData.get('searchTerm'));
+		// container.classList.add('paused');
+		// container.style.backgroundColor = getRandomColor(blue, red);
+
+	// });
+
+	// // Return a random RGB color between two given colours
+	// // https://stackoverflow.com/questions/23277585/javascript-pick-a-random-hex-color-between-a-start-and-end-color
+	// function getRandomColor(color1, color2) {
+	// 	let newColor = 'green';
+	// 	const rgb1 = rgb(color1); const rgb2 = rgb(color2); 
+	// 	console.log(rgb1);
+	// 	let rgb3 = [];
+	// 	for (let i=0; i<3; i++) 
+	// 		rgb3[i] = rgb1[i]+Math.random()*(rgb2[i]-rgb1[i]) | 0;
+	// 	newColor = '#' + rgb3
+	// 		.map(function(n){ return n.toString(16) })
+	// 		.map(function(s){ return "00".slice(s.length)+s}).join(''); 
+	// 	console.log(newColor);
+	// 	return newColor;
+	// }
+
+	// // Given a hex color, return the R, G, and B in an array
+	// function rgb(string){
+	// 	return string.match(/\w\w/g).map(function(b){ return parseInt(b,16) })
+	// }
+
+
+</script>
+</body>
+</html>
